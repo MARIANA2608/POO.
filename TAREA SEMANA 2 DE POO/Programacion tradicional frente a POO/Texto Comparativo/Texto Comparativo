@@ -1,0 +1,23 @@
+# Comparación entre Programación Tradicional y POO
+
+Este proyecto contiene dos enfoques para resolver el cálculo del promedio semanal del clima: uno utilizando Programación Tradicional y otro basado en Programación Orientada a Objetos (POO).
+
+## Archivos incluidos
+- `programacion_tradicional.py`: Código que utiliza funciones independientes para resolver el problema.
+- `programacion_poo.py`: Código que emplea una clase para encapsular datos y operaciones relacionadas.
+- Este archivo contiene la comparación entre ambos enfoques.
+
+## Comparación
+
+### Programación Tradicional
+- Organiza el código mediante funciones separadas para realizar tareas específicas.
+- Es un enfoque sencillo y adecuado para problemas pequeños y específicos.
+- Tiene limitaciones en términos de escalabilidad y reutilización.
+
+### Programación Orientada a Objetos
+- Encapsula datos y operaciones dentro de una clase, lo que mejora la organización del código.
+- Facilita la reutilización y la extensión del programa mediante conceptos como métodos y atributos.
+- Es más robusta y flexible para proyectos complejos o que pueden crecer en el futuro.
+
+## Conclusión
+Ambos enfoques tienen sus ventajas y limitaciones. Mientras que la Programación Tradicional puede ser más directa para problemas simples, la POO ofrece una estructura más sólida y preparada para escalabilidad.

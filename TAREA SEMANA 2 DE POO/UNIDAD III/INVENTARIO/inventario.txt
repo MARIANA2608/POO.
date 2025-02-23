@@ -1,0 +1,4 @@
+P001,Producto A,50
+P002,Producto B,30
+P003,Producto C,100
+P004,Producto D,20

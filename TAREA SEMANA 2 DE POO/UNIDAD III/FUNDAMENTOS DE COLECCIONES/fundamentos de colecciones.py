@@ -79,13 +79,13 @@ class Inventario:
         # Guarda el inventario actual en un archivo JSON
         try:
             with open(archivo, 'w') as f:
-                json.dump([p.a_diccionario() for p in self.productos.values()], f)
+                json.dump([p.a_diccionario() for p in self.productos.values()], f, indent=4)
             print("💾 Inventario guardado exitosamente.")
         except Exception as e:
             print(f"❌ Error al guardar el archivo: {e}")
 
     def cargar_desde_archivo(self, archivo):
-        # Carga el inventario desde un archivo JSON o crea el archivo si no existe
+        # Carga el inventario desde un archivo JSON
         try:
             with open(archivo, 'r') as f:
                 productos = json.load(f)
@@ -93,11 +93,18 @@ class Inventario:
                     self.agregar_producto(Producto(**p))
             print("📂 Inventario cargado correctamente.")
         except FileNotFoundError:
-            print("⚠️ Archivo no encontrado. Creando archivo nuevo con productos iniciales.")
-            self.crear_inventario_inicial(archivo)
+            print("⚠️ Archivo no encontrado. Se creará uno nuevo al guardar.")
+        except Exception as e:
+            print(f"❌ Error al cargar el archivo: {e}")
 
-    def crear_inventario_inicial(self, archivo):
-        # Crea un inventario inicial si el archivo no existe
+# Función principal: Menú interactivo para gestionar el inventario
+def menu():
+    inventario = Inventario()
+    inventario.cargar_desde_archivo('inventario.json')
+
+    # Productos predefinidos al iniciar el programa si el archivo no existe
+    if not inventario.productos:
+        print("📥 Cargando inventario inicial...")
         productos_iniciales = [
             Producto("001", "Laptop", 10, 750.00),
             Producto("002", "Mouse", 50, 25.00),
@@ -106,14 +113,7 @@ class Inventario:
             Producto("005", "Auriculares", 40, 60.00)
         ]
         for p in productos_iniciales:
-            self.agregar_producto(p)
-        # Guardar los productos iniciales en el archivo
-        self.guardar_en_archivo(archivo)
-
-# Función principal: Menú interactivo para gestionar el inventario
-def menu():
-    inventario = Inventario()
-    inventario.cargar_desde_archivo('inventario.json')
+            inventario.agregar_producto(p)
 
     while True:
         print("\n📊 Sistema Avanzado de Gestión de Inventarios")

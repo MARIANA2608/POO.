@@ -1,0 +1,38 @@
+[
+    {
+        "id_producto": "001",
+        "nombre": "Laptop",
+        "cantidad": 30,
+        "precio": 300.0
+    },
+    {
+        "id_producto": "002",
+        "nombre": "Mouse",
+        "cantidad": 50,
+        "precio": 25.0
+    },
+    {
+        "id_producto": "003",
+        "nombre": "Teclado",
+        "cantidad": 30,
+        "precio": 45.5
+    },
+    {
+        "id_producto": "004",
+        "nombre": "Monitor",
+        "cantidad": 20,
+        "precio": 150.75
+    },
+    {
+        "id_producto": "005",
+        "nombre": "Auriculares",
+        "cantidad": 40,
+        "precio": 60.0
+    },
+    {
+        "id_producto": "006",
+        "nombre": "Parlantes",
+        "cantidad": 20,
+        "precio": 150.0
+    }
+]
